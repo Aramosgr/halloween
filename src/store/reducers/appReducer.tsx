@@ -1,4 +1,5 @@
 import {
+  GET_GAME_STATE,
   TOKEN
 } from '../types';
 
@@ -10,6 +11,11 @@ export default (state: any = initialState, action: any): any => {
       return {
         ...state,
         token: action.token
+      };
+    case GET_GAME_STATE:
+      return {
+        ...state,
+        gameState: action.gameState
       };
     default:
       return state;

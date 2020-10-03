@@ -1,3 +1,4 @@
 export default {
-  token: undefined
+  token: undefined,
+  gameState: undefined
 };
