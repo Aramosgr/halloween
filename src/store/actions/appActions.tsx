@@ -17,7 +17,7 @@ export const getGameState = () => {
     gameService
       .getGameState()
       .then((response: any) => {
-        dispatch(getGameStateSuccess(response.data?));
+        dispatch(getGameStateSuccess(response.data));
       })
       .catch((error: any) => {
         console.log(error);
