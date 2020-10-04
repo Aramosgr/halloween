@@ -2,6 +2,7 @@ import {
   GET_GAME_STATE,
   GET_PHASE,
   GET_PHASES,
+  SET_GAME_STATE,
   TOKEN
 } from '../types';
 
@@ -15,6 +16,11 @@ export default (state: any = initialState, action: any): any => {
         token: action.token
       };
     case GET_GAME_STATE:
+      return {
+        ...state,
+        gameState: action.gameState
+      };
+    case SET_GAME_STATE:
       return {
         ...state,
         gameState: action.gameState

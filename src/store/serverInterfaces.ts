@@ -14,4 +14,5 @@ export interface IPhase {
   text: string;
   title: string;
   password: number;
+  passwordText: string;
 }

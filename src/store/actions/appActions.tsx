@@ -1,7 +1,7 @@
 import GameService from '../../services/gameService';
 import { IGameState, IPhase } from '../serverInterfaces';
 import {
-  GET_GAME_STATE
+  GET_GAME_STATE, GET_PHASE, GET_PHASES
 } from '../types';
 
 const gameService = new GameService();
@@ -13,12 +13,12 @@ export const getGameStateSuccess = (gameState: IGameState): object => ({
 });
 
 export const getPhasesSuccess = (phases: IPhase[]): object => ({
-  type: GET_GAME_STATE,
+  type: GET_PHASES,
   phases: phases
 });
 
 export const getPhaseSuccess = (phase: IPhase): object => ({
-  type: GET_GAME_STATE,
+  type: GET_PHASE,
   phase: phase
 });
 
@@ -26,6 +26,19 @@ export const getGameState = () => {
   return (dispatch: any) => {
     gameService
       .getGameState()
+      .then((response: any) => {
+        dispatch(getGameStateSuccess(response.data));
+      })
+      .catch((error: any) => {
+        console.log(error);
+      });
+  };
+};
+
+export const setGameState = (state: number) => {
+  return (dispatch: any) => {
+    gameService
+      .setGameState(state)
       .then((response: any) => {
         dispatch(getGameStateSuccess(response.data));
       })
