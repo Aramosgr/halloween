@@ -1,5 +1,7 @@
 import {
   GET_GAME_STATE,
+  GET_PHASE,
+  GET_PHASES,
   TOKEN
 } from '../types';
 
@@ -16,6 +18,16 @@ export default (state: any = initialState, action: any): any => {
       return {
         ...state,
         gameState: action.gameState
+      };
+    case GET_PHASES:
+      return {
+        ...state,
+        phases: action.phases
+      };
+    case GET_PHASE:
+      return {
+        ...state,
+        phases: action.phase
       };
     default:
       return state;

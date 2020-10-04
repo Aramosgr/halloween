@@ -1,4 +1,6 @@
 export default {
   token: undefined,
-  gameState: undefined
+  gameState: undefined,
+  phases: undefined,
+  phase: undefined
 };

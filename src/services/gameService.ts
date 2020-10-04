@@ -6,4 +6,16 @@ export default class GameService {
         headers: getHeaders()
       });
     }
+
+    getPhases(): Promise<Object> {        
+      return gameInstance.get(`/phases`, {
+        headers: getHeaders()
+      });
+    }
+
+    getPhase(id:number): Promise<Object> {        
+      return gameInstance.get(`/phase?id=${id}`, {
+        headers: getHeaders()
+      });
+    }
   }
