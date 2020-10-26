@@ -3,8 +3,8 @@ export default Object.freeze({
     name: 'Home',
     route: '/'
   },
-  LEVEL1: {
-    name: 'Level1',
-    route: '/level1'
+  MIEMBROS: {
+    name: 'Miembros',
+    route: '/miembros'
   }
 });

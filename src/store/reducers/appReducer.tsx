@@ -1,5 +1,6 @@
 import {
   GET_GAME_STATE,
+  GET_PARTICIPANTS,
   GET_PHASE,
   GET_PHASES,
   SET_GAME_STATE,
@@ -34,6 +35,11 @@ export default (state: any = initialState, action: any): any => {
       return {
         ...state,
         phases: action.phase
+      };
+    case GET_PARTICIPANTS:
+      return {
+        ...state,
+        participants: action.participants
       };
     default:
       return state;

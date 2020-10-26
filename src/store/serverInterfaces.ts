@@ -6,6 +6,7 @@ export interface IGameState {
   id: number;
   state: number;
   title: string;
+  totalPhases: number;
 }
 
 export interface IPhase {
@@ -13,6 +14,14 @@ export interface IPhase {
   name: string;
   text: string;
   title: string;
-  password: number;
+  password: string;
   passwordText: string;
+}
+
+export interface IParticipant {
+  id: number;
+  member1: string;
+  member2: string;
+  phase: number;
+  code: string;
 }
