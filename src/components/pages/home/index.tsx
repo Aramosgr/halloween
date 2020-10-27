@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { logo } from '../../../assets/images';
-import { happy } from '../../../assets/images';
+import { church } from '../../../assets/images';
 
 import './home.scss';
 
@@ -35,31 +35,41 @@ const Home = () => {
 
   return (
     <>
-      <div className="home">
-        <div className="home__title">
-          <img src={logo} className="home__title--logo" />
-          <h3 className="home__title--text">La primera regla de la sociedad, es que no hablamos de la sociedad</h3 >
-        </div>
-        <p className="home__main-text">
-          Si estás leyendo esta página, enhorabuena, tú serás el siguiente en dar el paso.
-            <br /><br />Bienvenido a la sociedad.
-            En este mundo que nos rodea, lleno de odio, pecado, suciedad, lascivia, libertinaje, amoralidad... alguien
-            tiene que levantarse y decir, basta!
-            <br /><br />
-            Tú eres ese alguien, las pobres almas de este mundo necesitan guía y nosotros, con tu ayuda, podemos dársela.
-            <br /><br />
-            Tan sólo tienes que escribir tu nombre, estás a un paso de cambiar el mundo.
-          </p>
-        <div>
-          <input id="name" type="text" onChange={(event: React.ChangeEvent<HTMLInputElement>) => handleNameChange(event.target.value)} />
-          <button id="submit" onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleNameClick()} >ÚNETE</button>
-        </div>
-        <div className="home__msg">
-        {showText && submit ?
-          <div className="home__msg--text">GRACIAS!</div>
-          : ""}
+      <div className="home container">
+
+          <div className="miembros__logo row mb-3 justify-content-center">
+            <img src={church}  className="img-fluid" alt="logo sociedad"/>
           </div>
-        <img src={happy} className="home__footer" />
+
+          <div className="row mb-3 justify-content-center">
+            <h5 className="text-light">La primera regla de la sociedad, es que no hablamos de la sociedad</h5 >
+          </div>   
+
+          <div className="row">
+            <p className="home__main-text">
+                En este mundo que nos rodea, lleno de pecado, suciedad, lascivia, libertinaje, amoralidad... alguien
+                tiene que levantarse y decir, basta! El alma humana no está preparada para ser libre, necesita una directrices para llegar
+                a su máxima expresión. Él te ayudará a conseguirlo.
+            </p>
+
+            <p className="home__main-text">
+                ¿Quieres evolucionar tu alma? Nosotros podemos elevarte. ¿Estás preparado? Tan sólo tienes que escribir tu nombre, estás a un paso de cambiar el mundo.
+              </p>
+          </div>
+
+          <div className="row justify-content-center">
+            <input id="name" type="text" onChange={(event: React.ChangeEvent<HTMLInputElement>) => handleNameChange(event.target.value)} />
+            <button id="submit" onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleNameClick()} >ÚNETE</button>
+          </div>
+
+        <div className="home__msg row">
+          {showText && submit ?
+            <div className="home__msg--text">¡GRACIAS!</div>
+            : ""}
+        </div>
+
+
+        
       </div >
     </>
   );
