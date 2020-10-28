@@ -42,13 +42,13 @@ const Level1 = (props: ILevel1Props) => {
   }
 
   return (
-    <>
-      <button className={"note"} onClick={() => playNote(1)}>1</button>
-      <button className={"note"} onClick={() => playNote(2)}>2</button>
-      <button className={"note"} onClick={() => playNote(3)}>3</button>
-      <button className={"note"} onClick={() => playNote(4)}>4</button>
-      <button className={"note"} onClick={() => playNote(5)}>5</button>
-    </>
+    <div className="row mt-5 pb-3 pt-1 bg-dark">
+      <button className={"note note1 col mr-1"} onClick={() => playNote(1)}></button>
+      <button className={"note note2 col mr-1"} onClick={() => playNote(2)}></button>
+      <button className={"note note3 col mr-1"} onClick={() => playNote(3)}></button>
+      <button className={"note note4 col mr-1"} onClick={() => playNote(4)}></button>
+      <button className={"note note5 col"} onClick={() => playNote(5)}></button>
+    </div>
   );
 }
 

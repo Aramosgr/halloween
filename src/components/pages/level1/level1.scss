@@ -1,4 +1,38 @@
 .note {
-    max-width: 40px;
-    margin-right: 10px;
-}  
+    background-color: white;
+    border: none;
+    border-radius: 0 0px 10px 10px;
+    min-height: 200px;
+
+} 
+.note:hover{
+    border: none;
+}
+.note1:active {
+    background-color: #f0a12c;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .note2:active {
+    background-color: #2cf03c;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .note3:active {
+    background-color: #f02ce0;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .note4:active {
+    background-color: #2cd9f0;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .note5:active {
+    background-color: #da1e1e;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+.note:focus {
+    outline: none;
+}

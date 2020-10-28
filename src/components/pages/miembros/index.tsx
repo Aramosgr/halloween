@@ -7,6 +7,7 @@ import { IParticipant, IPhase, IRootState } from '../../../store/serverInterface
 import Level1 from '../level1';
 
 import './miembros.scss';
+import img_logo from '../../../assets/images/logo.png';
 
 export interface IMiembrosProps {
   match: any
@@ -50,10 +51,15 @@ const Miembros = (props: IMiembrosProps) => {
   return (
     <>
       {currentPhase ?
-        <div className="miembros">
-          <div className="miembros__logo"></div>
-          <h3>La primera regla de la sociedad, es que no hablamos de la sociedad</h3 >
-          <div className="miembros__content">
+        <div className="miembros container">
+          <div className="miembros__logo row mb-3 justify-content-center">
+            <img src={img_logo}  alt="logo sociedad"/>
+          </div>
+          <div className="row mb-3 justify-content-center">
+            <h5 className="text-light">La primera regla de la sociedad, es que no hablamos de la sociedad</h5 >
+          </div>
+          
+          <div className="miembros__content row justify-content-center">
             <div className="miembros__content--img">
               {getParticipantImg(participant?.code).map((img: any, index: number) => {
                 return (
