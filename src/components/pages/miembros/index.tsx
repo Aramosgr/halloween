@@ -56,7 +56,7 @@ const Miembros = (props: IMiembrosProps) => {
             <img src={img_logo}  alt="logo sociedad"/>
           </div>
           <div className="row mb-3 justify-content-center">
-            <h5 className="text-light">La primera regla de la sociedad, es que no hablamos de la sociedad</h5 >
+            <h5 className="text-light">La primera regla de la sociedad, es que no hablamos de la sociedad AAAAAAAAA</h5 >
           </div>
           
           <div className="miembros__content row justify-content-center">
