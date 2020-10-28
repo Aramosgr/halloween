@@ -42,7 +42,7 @@ const Home = () => {
           </div>
 
           <div className="row mb-3 justify-content-center">
-            <h5 className="text-light">La primera regla de la sociedad, es que no hablamos de la sociedad</h5 >
+            <h5 className="text-light">La primera regla de la sociedad, es que no hablamos de la sociedad.</h5 >
           </div>   
 
           <div className="row">
